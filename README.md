@@ -1,7 +1,9 @@
-# Tauri + React + Typescript
+# ChatGPT Instant
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+Access ChatGPT through the Menu
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+## techStack
+1. tauri
+2. react
+3. tailwind
+4. vite
