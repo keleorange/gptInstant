@@ -31,6 +31,10 @@ export function Setting({onClose}: IProps) {
         onClose();
     }
 
+    function handleCancel() {
+        onClose();
+    }
+
     return (
         <div id="staticModal" data-modal-backdrop="static" tabIndex={-1} aria-hidden="true" className="fixed top-20 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
             <div className="relative p-3 transform overflow-hidden rounded-lg bg-slate-500 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
@@ -53,6 +57,7 @@ export function Setting({onClose}: IProps) {
                     <input onChange={handleTemperatureChange} value={store.temperature} type="number" id="temperature" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="0.75" required/>
                 </div>
                 <button onClick={handleSubmit} className="bg-cyan-500 text-white h-full rounded-lg shadow-sm px-4 py-1 ml-1 disabled:opacity-50">Save</button>
+                <button onClick={handleCancel} className=" bg-gray-800 text-white h-full rounded-lg shadow-sm px-4 py-1 ml-1 disabled:opacity-50">Cancel</button>
             </div>
         </div>
 

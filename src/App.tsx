@@ -115,7 +115,6 @@ function App() {
 
   const [showSetting, setShowSetting] = useState(false);
   function handleSetting() {
-    console.log('handleSettings');
     setShowSetting(true);
   }
 
