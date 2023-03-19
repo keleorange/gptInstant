@@ -9,4 +9,5 @@ Access ChatGPT through the Menu
 4. vite
 
 ## screenshot
-![screenshot](./public/screenshot.png)
+<img src="./public/screenshot.png" alt= “” width="300" height="600">
+<img src="./public/setting.png" alt= “” width="300" height="600">
