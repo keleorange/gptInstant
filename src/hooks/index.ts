@@ -1,9 +1,9 @@
 import React from "react";
 
-export const useClickOutside = (ref: React.RefObject<HTMLDivElement>, callback: () => void) => {
+export const useClickOutside = (ref: React.RefObject<HTMLDivElement>, callback: (e: any) => void) => {
     const handleClick = (e: any) => {
       if (ref.current && !ref.current.contains(e.target)) {
-        callback();
+        callback(e);
       }
     };
     React.useEffect(() => {

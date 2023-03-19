@@ -35,12 +35,14 @@ export function Setting({onClose}: IProps) {
         onClose();
     }
 
+   
+
     return (
-        <div id="staticModal" data-modal-backdrop="static" tabIndex={-1} aria-hidden="true" className="fixed top-20 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
-            <div className="relative p-3 transform overflow-hidden rounded-lg bg-slate-500 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+        <div id="staticModal" data-modal-backdrop="static" tabIndex={-1} aria-hidden="true" className="absolute top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+            <div className="relative mt-12 p-3 transform overflow-hidden rounded-lg bg-slate-500 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="mb-2">
                     <label htmlFor="API_KEY" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">API 密钥</label>
-                    <input onChange={handleKeyChange} value={store.API_KEY} type="text" id="API_KEY" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="sk_xxxxxxxxxxxx" required/>
+                    <input onChange={handleKeyChange} value={store.API_KEY} type="text" id="API_KEY" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="sk-xxxxxxxxxxxx" required/>
                 </div>
                 <div className="mb-2">
                     <label htmlFor="API_PROXY" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">API 代理</label>
@@ -48,7 +50,7 @@ export function Setting({onClose}: IProps) {
                 </div>
                 <div className="mb-2">
                     <label htmlFor="MODEL" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">模型</label>
-                    <select id="MODEL" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <select id="MODEL" className="bg-gray-50 border outline-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
                     </select>                
                 </div>

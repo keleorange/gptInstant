@@ -20,7 +20,9 @@ export function Header({ onClearSession, onSetting }: IProps) {
 
     const ref = useRef<HTMLDivElement>(null);
 
-    useClickOutside(ref, () => {
+    useClickOutside(ref, (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
         if(showSetting) {
             setShowSetting(false);
         }

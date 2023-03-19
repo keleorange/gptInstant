@@ -1,7 +1,7 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use tauri::{Manager, SystemTray, SystemTrayEvent, SystemTrayMenu, CustomMenuItem};
+use tauri::{Manager, SystemTray, SystemTrayEvent, SystemTrayMenu, CustomMenuItem, ActivationPolicy};
 use tauri_plugin_positioner::{Position, WindowExt};
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
@@ -13,7 +13,13 @@ fn greet(name: &str) -> String {
 fn main() {
     let quit = CustomMenuItem::new("quit".to_string(), "Quit").accelerator("Cmd+Q");
     let system_tray_menu = SystemTrayMenu::new().add_item(quit);
+    
     tauri::Builder::default()
+        .setup(|app| {
+            // hide dock icon
+            app.set_activation_policy(ActivationPolicy::Accessory);
+            Ok(())
+        })
         .plugin(tauri_plugin_positioner::init())
         .system_tray(SystemTray::new().with_menu(system_tray_menu))
         .on_system_tray_event(|app, event| {

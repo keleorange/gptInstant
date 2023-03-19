@@ -119,7 +119,7 @@ function App() {
   }
 
   return (
-    <div className="h-screen select-none flex flex-col container mx-auto font-sans p-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white">
+    <div style={{height: 'calc(100vh - 12px)'}} className="select-none flex flex-col container mx-auto font-sans p-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white">
       <Header onClearSession={handleClearSession} onSetting={handleSetting}/>
       <div className="container flex-1 overflow-auto">
       <div className="flex flex-col mt-5 select-text selection:bg-fuchsia-300 selection:text-white">

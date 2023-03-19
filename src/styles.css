@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.arrow {
+    position: relative;
+    padding: 6px 0;
+}
+  
+.arrow:before {
+    position: absolute;
+    bottom: 0;
+    inset-inline-start: 0;
+    width: 16px;
+    height: 8px;
+    background: rgb(30 41 59);
+    clip-path: path('M 0 8 A 4 4 0 0 0 2.82842712474619 6.82842712474619 L 6.585786437626905 3.0710678118654755 A 2 2 0 0 1 9.414213562373096 3.0710678118654755 L 13.17157287525381 6.82842712474619 A 4 4 0 0 0 16 8 Z');
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow:after {
+    content: "";
+    position: absolute;
+    width: 8.970562748477143px;
+    height: 8.970562748477143px;
+    bottom: 0;
+    inset-inline: 0;
+    margin: auto;
+    border-radius: 0 0 2px 0;
+    transform: translateY(50%) rotate(-135deg);
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 5%);
+    z-index: 0;
+    background: 0 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
