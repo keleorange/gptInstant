@@ -1,8 +1,8 @@
 [package]
-name = "chatGPT"
+name = "GPTInstant"
 version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "A ChatGPT App"
+authors = ["horizon0514"]
 license = ""
 repository = ""
 edition = "2021"
