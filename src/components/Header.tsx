@@ -13,7 +13,9 @@ export function Header({ onClearSession, onSetting }: IProps) {
         e.preventDefault();
         e.stopPropagation();
         setShowSetting(!showSetting);
-        localStorage.setItem('setting', JSON.stringify({'API_KEY': '', temperature: 0.75, top_p: 0.95, max_tokens: 200}));
+        if(!localStorage.getItem('setting')) {
+            localStorage.setItem('setting', JSON.stringify({'API_KEY': '', temperature: 0.75, top_p: 0.95, max_tokens: 200}));
+        }
     }
 
     const ref = useRef<HTMLDivElement>(null);
