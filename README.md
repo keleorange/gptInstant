@@ -7,3 +7,6 @@ Access ChatGPT through the Menu
 2. react
 3. tailwind
 4. vite
+
+## screenshot
+![screenshot](./public/screenshot.png)
