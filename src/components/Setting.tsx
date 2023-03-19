@@ -12,8 +12,6 @@ interface IProps {
 export function Setting({onClose}: IProps) {
     const s = JSON.parse(localStorage.getItem('setting') || '{}') as IStore;
 
-    console.log(s)
-
     const [store, setStore] = useState<IStore>(s);
 
     function handleKeyChange(e: React.ChangeEvent<HTMLInputElement>) {
