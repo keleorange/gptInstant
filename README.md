@@ -11,3 +11,6 @@ Access ChatGPT through the Menu
 ## screenshot
 <img src="./public/screenshot.png" alt= “” width="300" height="600">
 <img src="./public/setting.png" alt= “” width="300" height="600">
+
+## installation
+[download it in release page](https://github.com/keleorange/gptInstant/releases)
